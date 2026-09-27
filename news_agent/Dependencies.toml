@@ -10,7 +10,7 @@ distribution-version = "2201.13.4"
 [[package]]
 org = "ballerina"
 name = "ai"
-version = "1.11.2"
+version = "1.15.0"
 dependencies = [
 	{org = "ballerina", name = "cache"},
 	{org = "ballerina", name = "constraint"},
@@ -77,7 +77,7 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "crypto"
-version = "2.9.3"
+version = "2.12.1"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "time"}
@@ -86,7 +86,7 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "data.jsondata"
-version = "1.1.3"
+version = "1.1.4"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "lang.object"}
@@ -95,7 +95,7 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "data.xmldata"
-version = "1.6.2"
+version = "1.6.3"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "lang.object"}
@@ -104,7 +104,7 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "file"
-version = "1.12.0"
+version = "1.13.1"
 dependencies = [
 	{org = "ballerina", name = "io"},
 	{org = "ballerina", name = "jballerina.java"},
@@ -148,7 +148,7 @@ modules = [
 [[package]]
 org = "ballerina"
 name = "io"
-version = "1.8.0"
+version = "1.8.1"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "lang.value"}
@@ -267,7 +267,7 @@ version = "1.2.0"
 [[package]]
 org = "ballerina"
 name = "mcp"
-version = "1.0.3"
+version = "1.2.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
 	{org = "ballerina", name = "jballerina.java"},
@@ -277,7 +277,7 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "mime"
-version = "2.12.1"
+version = "2.12.2"
 dependencies = [
 	{org = "ballerina", name = "io"},
 	{org = "ballerina", name = "jballerina.java"},
@@ -327,7 +327,7 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "task"
-version = "2.11.1"
+version = "2.11.2"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "time"},
@@ -337,7 +337,7 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "time"
-version = "2.8.0"
+version = "2.8.1"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"}
 ]
@@ -345,7 +345,7 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "url"
-version = "2.6.1"
+version = "2.6.2"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"}
 ]
@@ -387,14 +387,74 @@ modules = [
 
 [[package]]
 org = "ballerinax"
-name = "idetraceprovider"
-version = "0.9.0"
+name = "ai.openai"
+version = "1.4.1"
 dependencies = [
+	{org = "ballerina", name = "ai"},
+	{org = "ballerina", name = "constraint"},
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "jballerina.java"},
+	{org = "ballerina", name = "lang.array"},
+	{org = "ballerina", name = "lang.regexp"},
+	{org = "ballerina", name = "log"},
+	{org = "ballerinax", name = "openai.chat"},
+	{org = "ballerinax", name = "openai.embeddings"},
+	{org = "ballerinax", name = "openai.responses"}
+]
+modules = [
+	{org = "ballerinax", packageName = "ai.openai", moduleName = "ai.openai"}
+]
+
+[[package]]
+org = "ballerinax"
+name = "amp"
+version = "1.1.0"
+dependencies = [
+	{org = "ballerina", name = "io"},
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "observe"}
 ]
 modules = [
-	{org = "ballerinax", packageName = "idetraceprovider", moduleName = "idetraceprovider"}
+	{org = "ballerinax", packageName = "amp", moduleName = "amp"}
+]
+
+[[package]]
+org = "ballerinax"
+name = "openai.chat"
+version = "5.0.0"
+dependencies = [
+	{org = "ballerina", name = "constraint"},
+	{org = "ballerina", name = "data.jsondata"},
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "log"},
+	{org = "ballerina", name = "os"},
+	{org = "ballerina", name = "url"},
+	{org = "ballerinai", name = "observe"}
+]
+
+[[package]]
+org = "ballerinax"
+name = "openai.embeddings"
+version = "1.0.6"
+dependencies = [
+	{org = "ballerina", name = "constraint"},
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "url"},
+	{org = "ballerinai", name = "observe"}
+]
+
+[[package]]
+org = "ballerinax"
+name = "openai.responses"
+version = "1.0.0"
+dependencies = [
+	{org = "ballerina", name = "constraint"},
+	{org = "ballerina", name = "data.jsondata"},
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "log"},
+	{org = "ballerina", name = "os"},
+	{org = "ballerina", name = "url"},
+	{org = "ballerinai", name = "observe"}
 ]
 
 [[package]]
@@ -405,7 +465,8 @@ dependencies = [
 	{org = "ballerina", name = "ai"},
 	{org = "ballerina", name = "http"},
 	{org = "ballerinai", name = "observe"},
-	{org = "ballerinax", name = "idetraceprovider"}
+	{org = "ballerinax", name = "ai.openai"},
+	{org = "ballerinax", name = "amp"}
 ]
 modules = [
 	{org = "danniles", packageName = "news_agent", moduleName = "news_agent"}
