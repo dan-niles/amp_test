@@ -1,0 +1,8 @@
+{
+  "instanceUrl": "http://api.amp.localhost:8080",
+  "org": "default",
+  "project": "default",
+  "agent": "news-agent",
+  "mode": "internal",
+  "environment": "default"
+}
